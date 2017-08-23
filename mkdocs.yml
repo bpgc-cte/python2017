@@ -1,0 +1,21 @@
+site_name: Introduction to Programming
+theme: 'material'
+extra:
+  palette:
+    primary: 'indigo'
+    accent: 'light blue'
+  logo: 'images/ai.png'
+  social:
+    - type: 'github'
+      link: 'https://github.com/bpgc-cte/rl2017'
+site_favicon: 'images/ai.png'
+pages:
+  - Home: 'index.md'
+  - Lecture 0 - Preparation:
+    - Environment Setup:  'environment-setup.md'
+    - Jupyter Notebook Tutorial: 'ipython-tutorial.md'
+
+  - Lecture 1 - DataTypes, Basic Math Operations, Precedence: 'lecture-1.md'
+
+markdown_extensions:
+  - codehilite
