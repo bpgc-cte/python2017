@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../images/ai.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Lecture 1 - DataTypes, Basic Math Operations, Precedence - Introduction to Programming</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Introduction to Programming" class="md-logo md-header-nav__button">
+            <img src="../images/ai.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Lecture 1 - DataTypes, Basic Math Operations, Precedence
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../images/ai.png">
+      </i>
+    
+    Introduction to Programming
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Lecture 0 - Preparation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Lecture 0 - Preparation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../environment-setup/" title="Environment Setup" class="md-nav__link">
+      Environment Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ipython-tutorial/" title="Jupyter Notebook Tutorial" class="md-nav__link">
+      Jupyter Notebook Tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Lecture 1 - DataTypes, Basic Math Operations, Precedence
+      </label>
+    
+    <a href="./" title="Lecture 1 - DataTypes, Basic Math Operations, Precedence" class="md-nav__link md-nav__link--active">
+      Lecture 1 - DataTypes, Basic Math Operations, Precedence
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agenda-for-the-class" title="Agenda for the Class:" class="md-nav__link">
+    Agenda for the Class:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-data" title="Numeric data" class="md-nav__link">
+    Numeric data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-precedence" title="Order of Precedence" class="md-nav__link">
+    Order of Precedence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" title="Strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-strings" title="Operations on Strings" class="md-nav__link">
+    Operations on Strings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slicing-operations" title="Slicing operations" class="md-nav__link">
+    Slicing operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" title="Lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-do-next" title="What to do next?" class="md-nav__link">
+    What to do next?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-jupyter-notebook-from-here" title="Download the Jupyter Notebook from here" class="md-nav__link">
+    Download the Jupyter Notebook from here
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#agenda-for-the-class" title="Agenda for the Class:" class="md-nav__link">
+    Agenda for the Class:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#numeric-data" title="Numeric data" class="md-nav__link">
+    Numeric data
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#order-of-precedence" title="Order of Precedence" class="md-nav__link">
+    Order of Precedence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" title="Strings" class="md-nav__link">
+    Strings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operations-on-strings" title="Operations on Strings" class="md-nav__link">
+    Operations on Strings
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slicing-operations" title="Slicing operations" class="md-nav__link">
+    Slicing operations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" title="Lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-to-do-next" title="What to do next?" class="md-nav__link">
+    What to do next?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-the-jupyter-notebook-from-here" title="Download the Jupyter Notebook from here" class="md-nav__link">
+    Download the Jupyter Notebook from here
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="lecture-1-introduction-to-programming">Lecture 1: Introduction to Programming</h1>
+<h2 id="agenda-for-the-class">Agenda for the Class:</h2>
+<ol>
+<li>Python in-built datatypes</li>
+<li>Basic mathematical operators and Precedence order</li>
+<li>Python Interpreter vs Python for Scripting</li>
+</ol>
+<p>Firstly we'll focus on the <strong>datatypes</strong>.
+1. <strong>Numeric</strong>
+2. <strong>Strings</strong>
+3. <strong>Lists</strong></p>
+<p>General format for <strong>Assigning</strong> a variable a value:
+Variable_name = Variable_Value</p>
+<ol>
+<li>We <strong>Do not</strong> mention datatype while assigning a variable a value in Python. (i.e. Dynamically Typed)</li>
+<li><strong>=</strong> is used to assign a variable a value. ( L Value and R value)</li>
+<li>A variable name must follow certain naming conventions. Example: '23', 'len' can be variable names.</li>
+<li>There is no such thing as "variable declaration" or "variable initialization" in Python. It's only variable assignment</li>
+</ol>
+<h2 id="numeric-data">Numeric data</h2>
+<div class="codehilite"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+<span class="n">b</span><span class="o">=</span><span class="mf">3.14</span>
+<span class="c1"># Assigning value 1 to variable a and 3.14 to variable b</span>
+</pre></div>
+
+
+<p>Mathematical Operations on Variables:
+1. Add ('+')
+2. Multiple ('*')
+3. Subtract ('-')
+4. Divide ('/')
+5. Modulo ('%')
+6. Exponentiation (**)</p>
+<h3 id="order-of-precedence"><strong>Order of Precedence</strong></h3>
+<p>Exponent &gt; (Multiple, Divide, Modulo) &gt; (Add, Subtract)</p>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">d</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">e</span> <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span> <span class="o">/</span> <span class="n">d</span>       <span class="c1">#( 30 * 15 ) / 5</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of (a + b) * c / d is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Value of (a + b) * c / d is  90.0
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="p">((</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span>     <span class="c1"># (30 * 15 ) / 5</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of ((a + b) * c) / d is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Value of ((a + b) * c) / d is  90.0
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">c</span> <span class="o">/</span> <span class="n">d</span><span class="p">);</span>    <span class="c1"># (30) * (15/5)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of (a + b) * (c / d) is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Value of (a + b) * (c / d) is  90.0
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span><span class="p">;</span>      <span class="c1">#  20 + (150/5)</span>
+<span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of a + (b * c) / d is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Value of a + (b * c) / d is  50.0
+</pre></div>
+
+
+<h2 id="strings">Strings</h2>
+<ol>
+<li><strong>Immutable</strong> datatype</li>
+<li>String enclosed within <strong>" String"</strong> or <strong>'String'</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">course_name</span> <span class="o">=</span> <span class="s2">&quot;Introduction to Programming&quot;</span>
+<span class="n">question</span> <span class="o">=</span> <span class="s2">&quot;Having a good time ? ;)&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">course_name</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">question</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Introduction to Programming
+Having a good time ? ;)
+</pre></div>
+
+
+<h3 id="operations-on-strings">Operations on Strings</h3>
+<ol>
+<li>Since strings are immutable, we can't change the value stored in a string</li>
+<li>We can concatenate ('join') multiple strings.</li>
+<li>Slice/substring operations</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">string_1</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string_1</span><span class="p">)</span>  <span class="c1"># &quot;len&quot; gives us the number of characters in the string</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string_1</span> <span class="o">+</span> <span class="s2">&quot; has&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="p">,</span> <span class="s2">&quot;characters&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Hello World! has 12 characters
+</pre></div>
+
+
+<ol>
+<li><strong>Indexing</strong> : Every charcater of the string can be accessed by it's position in the string.</li>
+<li>Indexing starts from zero.</li>
+<li>Syntax
+    string_name[index_number]</li>
+</ol>
+<p>Example:    </p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>H
+e
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>d
+</pre></div>
+
+
+<p>Negative Indexing:
+string[-1] gives us the last character
+string[-2] gives us the second last character
+and so on...</p>
+<h4 id="slicing-operations">Slicing operations</h4>
+<p>Syntax:</p>
+<p>string_name[start_index,end_index]</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">5</span> <span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">string_1</span><span class="p">)])</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>He
+ World!
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="n">string_1</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">string_1</span><span class="p">)])</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Hello World!
+</pre></div>
+
+
+<h2 id="lists">Lists</h2>
+<ol>
+<li>Initializing syntax: \n
+    list_name = [value_1,value_2,...,value_n]</li>
+<li>Behaviour Similar to strings</li>
+<li>Mutable</li>
+<li>Can contain multiple data types.</li>
+</ol>
+<div class="codehilite"><pre><span></span><span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">11</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">[2, 3, 5, 8, 11]</span>
+<span class="na">2</span>
+<span class="na">5</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="n">classroom</span><span class="p">)</span>
+<span class="k">print</span><span class="p">((</span><span class="n">classroom</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">[&#39;L&#39;, &#39;T&#39;, 1]</span>
+<span class="na">5</span>
+</pre></div>
+
+
+<h2 id="what-to-do-next">What to do next?</h2>
+<ol>
+<li>Play around in the python interpreter to explore various functionalities</li>
+<li>Understand the rules to name variables.</li>
+</ol>
+<h2 id="download-the-jupyter-notebook-from-here">Download the Jupyter Notebook from <a href="https://github.com/bpgc-cte/python2017/blob/master/notebooks/Lecture_1%20-%20Intro%20to%20Programming.ipynb">here</a></h2>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../ipython-tutorial/" title="Jupyter Notebook Tutorial" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Jupyter Notebook Tutorial
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/bpgc-cte/rl2017" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
