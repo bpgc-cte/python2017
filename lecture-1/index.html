@@ -245,6 +245,19 @@
     Order of Precedence
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-case-you-are-using-python-2-and-want-floating-point-division-eg-43-133333333333-and-not-43-1" title="In case you are using Python 2 and want floating point division (e.g: 4/3 --&gt; 1.33333333333 and not 4/3 --&gt; 1) :" class="md-nav__link">
+    In case you are using Python 2 and want floating point division (e.g: 4/3 --&gt; 1.33333333333 and not 4/3 --&gt; 1) :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -290,19 +303,18 @@
     Lists
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-to-do-next" title="What to do next?" class="md-nav__link">
     What to do next?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#download-the-jupyter-notebook-from-here" title="Download the Jupyter Notebook from here" class="md-nav__link">
-    Download the Jupyter Notebook from here
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -355,6 +367,19 @@
     Order of Precedence
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#in-case-you-are-using-python-2-and-want-floating-point-division-eg-43-133333333333-and-not-43-1" title="In case you are using Python 2 and want floating point division (e.g: 4/3 --&gt; 1.33333333333 and not 4/3 --&gt; 1) :" class="md-nav__link">
+    In case you are using Python 2 and want floating point division (e.g: 4/3 --&gt; 1.33333333333 and not 4/3 --&gt; 1) :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
       </ul>
@@ -400,19 +425,18 @@
     Lists
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#what-to-do-next" title="What to do next?" class="md-nav__link">
     What to do next?
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#download-the-jupyter-notebook-from-here" title="Download the Jupyter Notebook from here" class="md-nav__link">
-    Download the Jupyter Notebook from here
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -447,7 +471,7 @@ Variable_name = Variable_Value</p>
 <ol>
 <li>We <strong>Do not</strong> mention datatype while assigning a variable a value in Python. (i.e. Dynamically Typed)</li>
 <li><strong>=</strong> is used to assign a variable a value. ( L Value and R value)</li>
-<li>A variable name must follow certain naming conventions. Example: '23', 'len' can be variable names.</li>
+<li>A variable name must follow certain naming conventions. Example: '23', 'len' can <strong>not</strong> be variable names.</li>
 <li>There is no such thing as "variable declaration" or "variable initialization" in Python. It's only variable assignment</li>
 </ol>
 <h2 id="numeric-data">Numeric data</h2>
@@ -459,11 +483,12 @@ Variable_name = Variable_Value</p>
 
 <p>Mathematical Operations on Variables:
 1. Add ('+')
-2. Multiple ('*')
+2. Multiply ('*')
 3. Subtract ('-')
-4. Divide ('/')
-5. Modulo ('%')
-6. Exponentiation (**)</p>
+4. Divide ('/') - yields a decimal answer
+5. Divide ('//') - yields an integer quotient
+6. Modulo ('%')
+7. Exponentiation (**)</p>
 <h3 id="order-of-precedence"><strong>Order of Precedence</strong></h3>
 <p>Exponent &gt; (Multiple, Divide, Modulo) &gt; (Add, Subtract)</p>
 <div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>
@@ -479,16 +504,8 @@ Variable_name = Variable_Value</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>Value of (a + b) * c / d is  90.0
-</pre></div>
-
-
 <div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="p">((</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span>     <span class="c1"># (30 * 15 ) / 5</span>
 <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of ((a + b) * c) / d is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>Value of ((a + b) * c) / d is  90.0
 </pre></div>
 
 
@@ -497,16 +514,14 @@ Variable_name = Variable_Value</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>Value of (a + b) * (c / d) is  90.0
-</pre></div>
-
-
 <div class="codehilite"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="p">(</span><span class="n">b</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="n">d</span><span class="p">;</span>      <span class="c1">#  20 + (150/5)</span>
 <span class="k">print</span> <span class="p">(</span><span class="s2">&quot;Value of a + (b * c) / d is &quot;</span><span class="p">,</span>  <span class="n">e</span><span class="p">)</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>Value of a + (b * c) / d is  50.0
+<h4 id="in-case-you-are-using-python-2-and-want-floating-point-division-eg-43-133333333333-and-not-43-1">In case you are using Python 2 and want floating point division (e.g: 4/3 --&gt; 1.33333333333 and not 4/3 --&gt; 1) :</h4>
+<div class="codehilite"><pre><span></span> <span class="n">For</span> <span class="n">Python</span> <span class="n">shell</span> <span class="nb">type</span> <span class="ow">in</span> <span class="p">:</span> <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span><span class="p">,</span> <span class="n">division</span>
+ <span class="n">For</span> <span class="n">a</span> <span class="s2">&quot;.py&quot;</span> <span class="nb">file</span> <span class="p">:</span> <span class="n">Use</span> <span class="n">that</span> <span class="kn">import</span> <span class="nn">statement</span> <span class="nn">in</span> <span class="nn">the</span> <span class="nn">beginning</span> <span class="nn">of</span> <span class="nn">your</span> <span class="nn">Python</span> <span class="nn">file.</span>
 </pre></div>
 
 
@@ -522,11 +537,6 @@ Variable_name = Variable_Value</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>Introduction to Programming
-Having a good time ? ;)
-</pre></div>
-
-
 <h3 id="operations-on-strings">Operations on Strings</h3>
 <ol>
 <li>Since strings are immutable, we can't change the value stored in a string</li>
@@ -536,10 +546,6 @@ Having a good time ? ;)
 <div class="codehilite"><pre><span></span><span class="n">string_1</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
 <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string_1</span><span class="p">)</span>  <span class="c1"># &quot;len&quot; gives us the number of characters in the string</span>
 <span class="k">print</span><span class="p">(</span><span class="n">string_1</span> <span class="o">+</span> <span class="s2">&quot; has&quot;</span><span class="p">,</span> <span class="n">n</span> <span class="p">,</span> <span class="s2">&quot;characters&quot;</span><span class="p">)</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>Hello World! has 12 characters
 </pre></div>
 
 
@@ -555,16 +561,7 @@ Having a good time ? ;)
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>H
-e
-</pre></div>
-
-
 <div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">])</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>d
 </pre></div>
 
 
@@ -580,16 +577,7 @@ and so on...</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>He
- World!
-</pre></div>
-
-
 <div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">string_1</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">+</span><span class="n">string_1</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">string_1</span><span class="p">)])</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>Hello World!
 </pre></div>
 
 
@@ -608,29 +596,15 @@ and so on...</p>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">[2, 3, 5, 8, 11]</span>
-<span class="na">2</span>
-<span class="na">5</span>
-</pre></div>
-
-
 <div class="codehilite"><pre><span></span><span class="n">classroom</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;L&#39;</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
 <span class="k">print</span><span class="p">(</span><span class="n">classroom</span><span class="p">)</span>
 <span class="k">print</span><span class="p">((</span><span class="n">classroom</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">+</span> <span class="mi">4</span><span class="p">))</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span><span class="k">[&#39;L&#39;, &#39;T&#39;, 1]</span>
-<span class="na">5</span>
-</pre></div>
-
-
-<h2 id="what-to-do-next">What to do next?</h2>
-<ol>
-<li>Play around in the python interpreter to explore various functionalities</li>
-<li>Understand the rules to name variables.</li>
-</ol>
-<h2 id="download-the-jupyter-notebook-from-here">Download the Jupyter Notebook from <a href="https://github.com/bpgc-cte/python2017/blob/master/notebooks/Lecture_1%20-%20Intro%20to%20Programming.ipynb">here</a></h2>
+<h3 id="what-to-do-next">What to do next?</h3>
+<p>1.Play around in the python interpreter to explore various functionalities
+2.Understand the rules to name variables.</p>
                 
                   
                 
