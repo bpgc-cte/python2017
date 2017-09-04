@@ -1,0 +1,1070 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../images/ai.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog. - Introduction to Programming</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-02c2a4388f.palette.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body data-md-color-primary="indigo" data-md-color-accent="light-blue">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Introduction to Programming" class="md-logo md-header-nav__button">
+            <img src="../images/ai.png" width="24" height="24">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog.
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-logo md-nav__button">
+        <img src="../images/ai.png">
+      </i>
+    
+    Introduction to Programming
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Lecture 0 - Preparation
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Lecture 0 - Preparation
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../environment-setup/" title="Environment Setup" class="md-nav__link">
+      Environment Setup
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ipython-tutorial/" title="Jupyter Notebook Tutorial" class="md-nav__link">
+      Jupyter Notebook Tutorial
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../lecture-1/" title="Lecture 1 - DataTypes, Basic Math Operations, Precedence" class="md-nav__link">
+      Lecture 1 - DataTypes, Basic Math Operations, Precedence
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../lecture-2/" title="Lecture 2 - Linux, Lists, Basic, Small Program" class="md-nav__link">
+      Lecture 2 - Linux, Lists, Basic, Small Program
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog.
+      </label>
+    
+    <a href="./" title="Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog." class="md-nav__link md-nav__link--active">
+      Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-covered" title="Material covered :" class="md-nav__link">
+    Material covered :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else-and-logical-operators" title="If-else and Logical Operators" class="md-nav__link">
+    If-else and Logical Operators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-logical-operators" title="Binary Logical Operators :" class="md-nav__link">
+    Binary Logical Operators :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unary-logical-operators" title="Unary Logical Operators :" class="md-nav__link">
+    Unary Logical Operators :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chained-conditional" title="Chained Conditional" class="md-nav__link">
+    Chained Conditional
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-condition-need-not-directly-involve-a-logical-operator-for-example" title="The condition need not directly involve a logical operator. For example :" class="md-nav__link">
+    The condition need not directly involve a logical operator. For example :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterations" title="Iterations" class="md-nav__link">
+    Iterations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-library-functions-to-use-in-loops" title="Common library functions to use in loops :" class="md-nav__link">
+    Common library functions to use in loops :
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range" title="range" class="md-nav__link">
+    range
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" title="enumerate" class="md-nav__link">
+    enumerate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" title="For Loop" class="md-nav__link">
+    For Loop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" title="Tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-cannot-change-any-element-of-a-tuple-to-a-new-value-since-tuples-are-immutable-types-for-example" title="You cannot change any element of a tuple to a new value since tuples are immutable types. For example :" class="md-nav__link">
+    You cannot change any element of a tuple to a new value since tuples are immutable types. For example :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-in-class-assignment" title="Short in-class assignment" class="md-nav__link">
+    Short in-class assignment
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#material-covered" title="Material covered :" class="md-nav__link">
+    Material covered :
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-else-and-logical-operators" title="If-else and Logical Operators" class="md-nav__link">
+    If-else and Logical Operators
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#binary-logical-operators" title="Binary Logical Operators :" class="md-nav__link">
+    Binary Logical Operators :
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unary-logical-operators" title="Unary Logical Operators :" class="md-nav__link">
+    Unary Logical Operators :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#chained-conditional" title="Chained Conditional" class="md-nav__link">
+    Chained Conditional
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-condition-need-not-directly-involve-a-logical-operator-for-example" title="The condition need not directly involve a logical operator. For example :" class="md-nav__link">
+    The condition need not directly involve a logical operator. For example :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iterations" title="Iterations" class="md-nav__link">
+    Iterations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-library-functions-to-use-in-loops" title="Common library functions to use in loops :" class="md-nav__link">
+    Common library functions to use in loops :
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#range" title="range" class="md-nav__link">
+    range
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enumerate" title="enumerate" class="md-nav__link">
+    enumerate
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples_1" title="Examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#for-loop" title="For Loop" class="md-nav__link">
+    For Loop
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure" title="Structure" class="md-nav__link">
+    Structure
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuples" title="Tuples" class="md-nav__link">
+    Tuples
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#you-cannot-change-any-element-of-a-tuple-to-a-new-value-since-tuples-are-immutable-types-for-example" title="You cannot change any element of a tuple to a new value since tuples are immutable types. For example :" class="md-nav__link">
+    You cannot change any element of a tuple to a new value since tuples are immutable types. For example :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#short-in-class-assignment" title="Short in-class assignment" class="md-nav__link">
+    Short in-class assignment
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="introduction-to-programming-lecture-3">Introduction to Programming - Lecture 3</h1>
+<h3 id="material-covered">Material covered :</h3>
+<div class="codehilite"><pre><span></span>1. Conditional statement &quot;if&quot; and Logical Operators
+2. For loops
+</pre></div>
+
+
+<h2 id="if-else-and-logical-operators">If-else and Logical Operators</h2>
+<div class="codehilite"><pre><span></span>&quot;If&quot; is the simplest conditional statement. It simply checks if an evaluation condition is True and if it is then it executes a certain block of code. The checking is usually done by a logical operator such as --&gt; more than( &gt; ), less than( &lt; ), equal to( == ), not equal to ( != or not), etc
+
+ if &lt;condition&gt;:
+     execute statement(s)
+</pre></div>
+
+
+<h3 id="binary-logical-operators">Binary Logical Operators :</h3>
+<div class="codehilite"><pre><span></span>1. Greater than ( &gt; )
+2. Less than ( &lt; )
+3. Equal to ( == )
+</pre></div>
+
+
+<h3 id="unary-logical-operators">Unary Logical Operators :</h3>
+<div class="codehilite"><pre><span></span>1. ! or not
+
+Let us look at some examples :
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="c1"># Greater than ( &gt; )</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;One is more than zero&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;BITS Pilani Goa Campus is better than IIT Kanpur&quot;</span><span class="p">)</span>
+
+<span class="c1"># Less than ( &lt; )</span>
+<span class="k">if</span> <span class="mi">12</span> <span class="o">&lt;</span> <span class="mi">42</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Yes, 12 is less than 42&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Everyone registered in CTE Python will pass with distinction (90%+ marks)&quot;</span><span class="p">)</span>
+
+<span class="c1"># Equal to ( == )</span>
+<span class="k">if</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Two plus Two equals Four&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Lite......&quot;</span><span class="p">)</span>
+
+<span class="c1"># Not equal to ( != )</span>
+<span class="k">if</span> <span class="mi">1</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sachin&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Kohli&quot;</span><span class="p">)</span>
+
+<span class="c1"># Inversion operator</span>
+<span class="k">if</span> <span class="ow">not</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Lite....&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;CTE Python....&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="chained-conditional">Chained Conditional</h2>
+<div class="codehilite"><pre><span></span>if &lt;condition 1&gt; is True:
+    execute &lt;statement(s) &gt; 1
+elif &lt;condition 2&gt; is True:
+    execute &lt;statement(s) &gt; 2
+elif &lt;condition 3&gt; is True:
+    execute &lt;statement(s) &gt; 3
+elif &lt;condition 4&gt; is True:
+    execute &lt;statement(s) &gt; 4
+.
+.
+.
+else:
+    execute &lt;statement(s)&gt; n
+</pre></div>
+
+
+<p>#### Let us see an example : </p>
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="ow">not</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;.....Lite&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<h4 id="the-condition-need-not-directly-involve-a-logical-operator-for-example">The condition need not directly involve a logical operator. For example :</h4>
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="nb">list</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="s2">&quot;is a list !&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">2</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Yes, 2 is in &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="mi">5</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;No, 5 is not in &quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+
+<h2 id="iterations">Iterations</h2>
+<div class="codehilite"><pre><span></span>Iterative constructs are a key feature of any well developed programming language.
+Looping can be done over an iterable which can be a list, set, dictionary, etc.
+Let us concern ourselves with lists for now.
+</pre></div>
+
+
+<h2 id="common-library-functions-to-use-in-loops">Common library functions to use in loops :</h2>
+<h3 id="range">range</h3>
+<div class="codehilite"><pre><span></span> Usage : range(start, stop, step)
+
+ This library function returns a list which is an arithmetic progression. The default step value is 1.
+</pre></div>
+
+
+<h4 id="examples">Examples</h4>
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[0, 3, 6, 9]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">6</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[10, 8, 6, 4, 2]
+</pre></div>
+
+
+<h3 id="enumerate">enumerate</h3>
+<div class="codehilite"><pre><span></span> Usage : enumerate(&lt;list&gt;, starting_index=1)
+
+ This library function returns an iterable object contains tuples of structure (index, list value at index).
+ Extra optional argument provides a different starting index. Default starting index is 0.
+ In that case the tuples are of the structure (index, list value at &lt;index - starting_index&gt;)
+</pre></div>
+
+
+<h4 id="examples_1">Examples</h4>
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">enumerate</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>[(10, 0), (11, 1), (12, 2), (13, 3), (14, 4)]
+</pre></div>
+
+
+<h2 id="for-loop">For Loop</h2>
+<h3 id="structure">Structure</h3>
+<div class="codehilite"><pre><span></span>for value in iterable:
+    execute statement(s)
+
+Only by looking at many examples will this become clear
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>1 2 3 4 5
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">b</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]]</span>
+<span class="k">for</span> <span class="n">sublist</span> <span class="ow">in</span> <span class="n">b</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">sublist</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; &#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>1 2 3 4 5 6 7 8 9
+</pre></div>
+
+
+<h2 id="tuples">Tuples</h2>
+<div class="codehilite"><pre><span></span>Tuples are the immutable equivalent of lists.
+
+Declared by : (value_1, value_2, .....)
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>(2, 3, 4)
+</pre></div>
+
+
+<h4 id="you-cannot-change-any-element-of-a-tuple-to-a-new-value-since-tuples-are-immutable-types-for-example">You cannot change any element of a tuple to a new value since tuples are immutable types. For example :</h4>
+<div class="codehilite"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-5-efd97496539c&gt; in &lt;module&gt;()
+----&gt; 1 a[1] = 10
+      2 print(a)
+
+
+TypeError: &#39;tuple&#39; object does not support item assignment
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;One&quot;</span><span class="p">,</span> <span class="s2">&quot;Two&quot;</span><span class="p">,</span> <span class="s2">&quot;Three&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Value at index &lt;&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;&gt; of list&lt;a&gt; is : &quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>Value at index &lt; 0 &gt; of list&lt;a&gt; is :  One
+Value at index &lt; 1 &gt; of list&lt;a&gt; is :  Two
+Value at index &lt; 2 &gt; of list&lt;a&gt; is :  Three
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>         *
+        **
+       ***
+      ****
+     *****
+    ******
+   *******
+  ********
+ *********
+</pre></div>
+
+
+<h2 id="short-in-class-assignment">Short in-class assignment</h2>
+<div class="codehilite"><pre><span></span>Write a program to print the following pattern.
+
+**********
+****--****
+***----***
+**------**
+*--------*
+**------**
+***----***
+****--****
+**********
+
+First line --&gt; 10 stars
+Second line --&gt; 4 stars ,2 dashes, 4 stars
+Third line --&gt; 3 stars, 4 dashes, 3 stars
+.
+.
+.
+Eigth line --&gt; 4 stars ,2 dashes, 4 stars
+Ninth line --&gt; 10 stars again.
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span> <span class="o">-</span> <span class="n">i</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;*&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>        
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>**********
+****--****
+***----***
+**------**
+*--------*
+**------**
+***----***
+****--****
+**********
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>
+</pre></div>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../lecture-2/" title="Lecture 2 - Linux, Lists, Basic, Small Program" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Lecture 2 - Linux, Lists, Basic, Small Program
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+      <a href="https://github.com/bpgc-cte/rl2017" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

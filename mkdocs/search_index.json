@@ -99,6 +99,136 @@
             "location": "/lecture-1/#what-to-do-next",
             "text": "1.Play around in the python interpreter to explore various functionalities\n2.Understand the rules to name variables.",
             "title": "What to do next?"
+        },
+        {
+            "location": "/lecture-2/",
+            "text": "Introduction to Programming - Lecture 2\n\n\nAgenda for the class\n\n\n\n\nLinux terminal Basics (~20 minutes)\n\n\nLists (~15 minutes)\n\n\nList functions such as append etc.\n\n\nMutability\n\n\nSlicing/len()\n\n\nnested lists\n\n\n\n\n\n\nBasic Input and Output (5-10 minutes) \n\n\nCreating a small program (Remaining time) \n\n\n\n\nLists\n\n\n\n\nA default python datatype.\n\n\nStrings and lists have some similar features, like length, indexing of elements etc.\n\n\nBasic differences from strings are\n\n\nMutability: Lists are mutable whereas strings are not. This basically means we can make changes to lists after initiailizing but we can't do that in strings.\n\n\nLists can have multiple datatypes within them.\n\n\n\n\n\n\n\n\nsquares\n=\n[\n0\n,\n1\n,\n4\n,\n9\n,\n16\n,\n25\n]\n \n#list_name = [value1,value2,value3,...] \n\n\nprint\n(\nsquares\n)\n\n\nprint\n(\n\"Length is:\"\n,\nlen\n(\nsquares\n))\n\n\n\n\n\n\nprint\n(\nsquares\n[\n3\n])\n\n\n\n\n\n\nsquares\n.\nappend\n(\n36\n)\n\n\nprint\n(\nsquares\n)\n\n\n\n\n\n\nsquares\n.\nappend\n(\n\"forty-nine\"\n)\n\n\nprint\n(\nsquares\n)\n\n\n\n\n\n\nsquares\n.\nextend\n([\n64\n,\n81\n])\n\n\nprint\n(\nsquares\n)\n\n\n\n\n\n\nsquares\n[\n7\n]\n=\n49\n\n\nprint\n(\nsquares\n)\n\n\n\n\n\n\nprint\n(\nsquares\n[\n0\n:\n3\n])\n\n\n\n\n\n\n4\n \nin\n \nsquares\n\n\n\n\n\n\nSome other list methods\n\n\n\n\nlist.index(x) \n\n\nlist.count(x)\n\n\nlist.insert(i,x)\n\n\n\n\nLink: https://docs.python.org/3/tutorial/datastructures.html \n\n\nL1\n \n=\n \n[\n \n10\n,\n \n[\n20\n,\n21\n,\n22\n,\n23\n],\n \n30\n,\n \n[\n40\n,\n41\n],\n \n50\n \n]\n\n\nprint\n(\nL1\n)\n\n\n\n\n\n\nprint\n(\nL1\n[\n0\n])\n\n\n\n\n\n\nprint\n(\nL1\n[\n1\n])\n\n\n\n\n\n\nprint\n(\nL1\n[\n0\n][\n0\n])\n \n# L1[0] gives us the first element of the list, which is an integer(10). Since integers cannot be \n\n                \n# indexed like a string or list, we get an error.\n\n\n\n\n\n\nprint\n(\nL1\n[\n1\n][\n0\n])\n\n\n\n\n\n\nInput methods\n\n\nn1\n=\ninput\n(\n\"Enter first number: \"\n)\n\n\nn2\n=\ninput\n(\n\"Enter second number: \"\n)\n\n\n\n\n\n\nsum\n=\nn1\n+\nn2\n\n\nprint\n(\nsum\n)\n\n\n\n\n\n\na\n=\nint\n(\nn1\n)\n\n\nb\n=\nint\n(\nn2\n)\n\n\nsum\n=\na\n+\nb\n\n\nprint\n(\nsum\n)\n\n\n\n\n\n\nnum\n=\n'-3.15'\n\n\npie\n=\nfloat\n(\nnum\n)\n\n\nprint\n(\npie\n)\n\n\n\n\n\n\nShort Assignment 1 :\n\n\nGetting comfortable with list operations is important. Even though the problem can be concisely solved with the\nuse of for loop, since loops haven't been taught yet, you can solve it by a bunch of slicing statements instead.\n\n1. Take a string as input and print it explained by the example below. Given length of string is equal to 12.\n\n   Example\n   --------\n\n   Input : HelloWorlds!\n\n   Output :\n\n   HelloWorlds!\n   Hlools\n   Hlod\n   Hol\n   HWs\n   Ho\n   !sdlroWolleH\n   !drWle\n   !lWl\n   !rl\n   !oe\n   !W\n\n\n2. Take two strings as input and print it as explained by the example below.\n   Total sum length of both strings is 19.\n\n   Example\n   -------\n\n   Input : string1 --> \"DireStraits\", string2 --> \"TheKinks\"\n\n   Output :\n\n   stiartSeriDskniKehT\n   sirSrDsih\n   stDs\n   srs\n   ss",
+            "title": "Lecture 2 - Linux, Lists, Basic, Small Program"
+        },
+        {
+            "location": "/lecture-2/#introduction-to-programming-lecture-2",
+            "text": "",
+            "title": "Introduction to Programming - Lecture 2"
+        },
+        {
+            "location": "/lecture-2/#agenda-for-the-class",
+            "text": "Linux terminal Basics (~20 minutes)  Lists (~15 minutes)  List functions such as append etc.  Mutability  Slicing/len()  nested lists    Basic Input and Output (5-10 minutes)   Creating a small program (Remaining time)",
+            "title": "Agenda for the class"
+        },
+        {
+            "location": "/lecture-2/#lists",
+            "text": "A default python datatype.  Strings and lists have some similar features, like length, indexing of elements etc.  Basic differences from strings are  Mutability: Lists are mutable whereas strings are not. This basically means we can make changes to lists after initiailizing but we can't do that in strings.  Lists can have multiple datatypes within them.     squares = [ 0 , 1 , 4 , 9 , 16 , 25 ]   #list_name = [value1,value2,value3,...]   print ( squares )  print ( \"Length is:\" , len ( squares ))   print ( squares [ 3 ])   squares . append ( 36 )  print ( squares )   squares . append ( \"forty-nine\" )  print ( squares )   squares . extend ([ 64 , 81 ])  print ( squares )   squares [ 7 ] = 49  print ( squares )   print ( squares [ 0 : 3 ])   4   in   squares",
+            "title": "Lists"
+        },
+        {
+            "location": "/lecture-2/#some-other-list-methods",
+            "text": "list.index(x)   list.count(x)  list.insert(i,x)   Link: https://docs.python.org/3/tutorial/datastructures.html   L1   =   [   10 ,   [ 20 , 21 , 22 , 23 ],   30 ,   [ 40 , 41 ],   50   ]  print ( L1 )   print ( L1 [ 0 ])   print ( L1 [ 1 ])   print ( L1 [ 0 ][ 0 ])   # L1[0] gives us the first element of the list, which is an integer(10). Since integers cannot be  \n                 # indexed like a string or list, we get an error.   print ( L1 [ 1 ][ 0 ])",
+            "title": "Some other list methods"
+        },
+        {
+            "location": "/lecture-2/#input-methods",
+            "text": "n1 = input ( \"Enter first number: \" )  n2 = input ( \"Enter second number: \" )   sum = n1 + n2  print ( sum )   a = int ( n1 )  b = int ( n2 )  sum = a + b  print ( sum )   num = '-3.15'  pie = float ( num )  print ( pie )",
+            "title": "Input methods"
+        },
+        {
+            "location": "/lecture-2/#short-assignment-1",
+            "text": "Getting comfortable with list operations is important. Even though the problem can be concisely solved with the\nuse of for loop, since loops haven't been taught yet, you can solve it by a bunch of slicing statements instead.\n\n1. Take a string as input and print it explained by the example below. Given length of string is equal to 12.\n\n   Example\n   --------\n\n   Input : HelloWorlds!\n\n   Output :\n\n   HelloWorlds!\n   Hlools\n   Hlod\n   Hol\n   HWs\n   Ho\n   !sdlroWolleH\n   !drWle\n   !lWl\n   !rl\n   !oe\n   !W\n\n\n2. Take two strings as input and print it as explained by the example below.\n   Total sum length of both strings is 19.\n\n   Example\n   -------\n\n   Input : string1 --> \"DireStraits\", string2 --> \"TheKinks\"\n\n   Output :\n\n   stiartSeriDskniKehT\n   sirSrDsih\n   stDs\n   srs\n   ss",
+            "title": "Short Assignment 1 :"
+        },
+        {
+            "location": "/lecture-3/",
+            "text": "Introduction to Programming - Lecture 3\n\n\nMaterial covered :\n\n\n1. Conditional statement \"if\" and Logical Operators\n2. For loops\n\n\n\n\n\nIf-else and Logical Operators\n\n\n\"If\" is the simplest conditional statement. It simply checks if an evaluation condition is True and if it is then it executes a certain block of code. The checking is usually done by a logical operator such as --> more than( > ), less than( < ), equal to( == ), not equal to ( != or not), etc\n\n if <condition>:\n     execute statement(s)\n\n\n\n\n\nBinary Logical Operators :\n\n\n1. Greater than ( > )\n2. Less than ( < )\n3. Equal to ( == )\n\n\n\n\n\nUnary Logical Operators :\n\n\n1. ! or not\n\nLet us look at some examples :\n\n\n\n\n\n# Greater than ( > )\n\n\nif\n \n1\n \n>\n \n0\n:\n\n    \nprint\n(\n\"One is more than zero\"\n)\n\n\nelse\n:\n\n    \nprint\n(\n\"BITS Pilani Goa Campus is better than IIT Kanpur\"\n)\n\n\n\n# Less than ( < )\n\n\nif\n \n12\n \n<\n \n42\n:\n\n    \nprint\n(\n\"Yes, 12 is less than 42\"\n)\n\n\nelse\n:\n\n    \nprint\n(\n\"Everyone registered in CTE Python will pass with distinction (90%+ marks)\"\n)\n\n\n\n# Equal to ( == )\n\n\nif\n \n2\n \n+\n \n2\n \n==\n \n4\n:\n\n    \nprint\n(\n\"Two plus Two equals Four\"\n)\n\n\nelse\n:\n\n    \nprint\n(\n\"Lite......\"\n)\n\n\n\n# Not equal to ( != )\n\n\nif\n \n1\n \n!=\n \n0\n:\n\n    \nprint\n(\n\"Sachin\"\n)\n\n\nelse\n:\n\n    \nprint\n(\n\"Kohli\"\n)\n\n\n\n# Inversion operator\n\n\nif\n \nnot\n \n2\n \n+\n \n2\n \n==\n \n4\n:\n\n    \nprint\n(\n\"Lite....\"\n)\n\n\nelse\n:\n\n    \nprint\n(\n\"CTE Python....\"\n)\n\n\n\n\n\n\nChained Conditional\n\n\nif <condition 1> is True:\n    execute <statement(s) > 1\nelif <condition 2> is True:\n    execute <statement(s) > 2\nelif <condition 3> is True:\n    execute <statement(s) > 3\nelif <condition 4> is True:\n    execute <statement(s) > 4\n.\n.\n.\nelse:\n    execute <statement(s)> n\n\n\n\n\n\n#### Let us see an example : \n\n\nif\n \n1\n \n<\n \n0\n:\n\n    \nprint\n(\n1\n,\n \nend\n=\n''\n)\n\n\nelif\n \n2\n \n==\n \n3\n:\n\n    \nprint\n(\n2\n,\n \nend\n=\n''\n)\n\n\nelif\n \nnot\n \n3\n \n==\n \n4\n:\n\n    \nprint\n(\n3\n,\n \nend\n=\n''\n)\n\n\nprint\n(\n\".....Lite\"\n)\n\n\n\n\n\n\nThe condition need not directly involve a logical operator. For example :\n\n\na\n \n=\n \n[\n1\n,\n \n2\n,\n \n3\n]\n\n\n\nif\n \nisinstance\n(\na\n,\n \nlist\n):\n\n    \nprint\n(\na\n,\n \n\"is a list !\"\n)\n\n\n\nif\n \n2\n \nin\n \na\n:\n\n    \nprint\n(\n\"Yes, 2 is in \"\n,\n \na\n)\n\n\n\nif\n \n5\n \nnot\n \nin\n \na\n:\n\n    \nprint\n(\n\"No, 5 is not in \"\n,\n \na\n)\n\n\n\n\n\n\nIterations\n\n\nIterative constructs are a key feature of any well developed programming language.\nLooping can be done over an iterable which can be a list, set, dictionary, etc.\nLet us concern ourselves with lists for now.\n\n\n\n\n\nCommon library functions to use in loops :\n\n\nrange\n\n\n Usage : range(start, stop, step)\n\n This library function returns a list which is an arithmetic progression. The default step value is 1.\n\n\n\n\n\nExamples\n\n\nlist\n(\nrange\n(\n0\n,\n \n10\n))\n\n\n\n\n\n\n[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n\n\n\n\nlist\n(\nrange\n(\n-\n4\n,\n \n10\n))\n\n\n\n\n\n\n[-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n\n\n\n\nlist\n(\nrange\n(\n0\n,\n \n10\n,\n \n3\n))\n\n\n\n\n\n\n[0, 3, 6, 9]\n\n\n\n\n\nlist\n(\nrange\n(\n0\n,\n \n5\n,\n \n-\n6\n))\n\n\n\n\n\n\n[]\n\n\n\n\n\nlist\n(\nrange\n(\n-\n10\n,\n \n10\n,\n \n-\n5\n))\n\n\n\n\n\n\n[]\n\n\n\n\n\nlist\n(\nrange\n(\n10\n,\n \n2\n,\n \n3\n))\n\n\n\n\n\n\n[]\n\n\n\n\n\nlist\n(\nrange\n(\n10\n,\n \n1\n,\n \n-\n2\n))\n\n\n\n\n\n\n[10, 8, 6, 4, 2]\n\n\n\n\n\nenumerate\n\n\n Usage : enumerate(<list>, starting_index=1)\n\n This library function returns an iterable object contains tuples of structure (index, list value at index).\n Extra optional argument provides a different starting index. Default starting index is 0.\n In that case the tuples are of the structure (index, list value at <index - starting_index>)\n\n\n\n\n\nExamples\n\n\nlist\n(\nenumerate\n(\nrange\n(\n0\n,\n5\n)))\n\n\n\n\n\n\n[(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]\n\n\n\n\n\nlist\n(\nenumerate\n(\nrange\n(\n0\n,\n5\n),\n \n10\n))\n\n\n\n\n\n\n[(10, 0), (11, 1), (12, 2), (13, 3), (14, 4)]\n\n\n\n\n\nFor Loop\n\n\nStructure\n\n\nfor value in iterable:\n    execute statement(s)\n\nOnly by looking at many examples will this become clear\n\n\n\n\n\na\n \n=\n \n[\n1\n,\n \n2\n,\n \n3\n,\n \n4\n,\n \n5\n]\n\n\n\nfor\n \nvalue\n \nin\n \na\n:\n\n    \nprint\n(\nvalue\n,\n \nend\n=\n' '\n)\n\n\n\n\n\n\n1 2 3 4 5\n\n\n\n\n\nb\n \n=\n \n[[\n1\n,\n \n2\n,\n \n3\n],\n\n     \n[\n4\n,\n \n5\n,\n \n6\n],\n\n     \n[\n7\n,\n \n8\n,\n \n9\n]]\n\n\nfor\n \nsublist\n \nin\n \nb\n:\n\n    \nfor\n \nvalue\n \nin\n \nsublist\n:\n\n        \nprint\n(\nvalue\n,\n \nend\n=\n' '\n)\n\n\n\n\n\n\n1 2 3 4 5 6 7 8 9\n\n\n\n\n\nTuples\n\n\nTuples are the immutable equivalent of lists.\n\nDeclared by : (value_1, value_2, .....)\n\n\n\n\n\na\n \n=\n \n(\n2\n,\n \n3\n,\n \n4\n)\n\n\nprint\n(\na\n)\n\n\n\n\n\n\n(2, 3, 4)\n\n\n\n\n\nYou cannot change any element of a tuple to a new value since tuples are immutable types. For example :\n\n\na\n[\n1\n]\n \n=\n \n10\n\n\nprint\n(\na\n)\n\n\n\n\n\n\n---------------------------------------------------------------------------\n\nTypeError                                 Traceback (most recent call last)\n\n<ipython-input-5-efd97496539c> in <module>()\n----> 1 a[1] = 10\n      2 print(a)\n\n\nTypeError: 'tuple' object does not support item assignment\n\n\n\n\n\na\n \n=\n \n[\n\"One\"\n,\n \n\"Two\"\n,\n \n\"Three\"\n]\n\n\nfor\n \ni\n,\n \nvalue\n \nin\n \nenumerate\n(\na\n):\n\n    \nprint\n(\n\"Value at index <\"\n,\n \ni\n,\n \n\"> of list<a> is : \"\n,\n \nvalue\n)\n\n\n\n\n\n\nValue at index < 0 > of list<a> is :  One\nValue at index < 1 > of list<a> is :  Two\nValue at index < 2 > of list<a> is :  Three\n\n\n\n\n\nfor\n \ni\n \nin\n \nrange\n(\n0\n,\n \n10\n):\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n0\n,\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n\n    \nprint\n(\n\"\"\n)\n\n\n\n\n\n\n*\n**\n***\n****\n*****\n******\n*******\n********\n*********\n\n\n\n\n\nfor\n \ni\n \nin\n \nrange\n(\n0\n,\n \n10\n):\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n10\n,\n \ni\n,\n \n-\n1\n):\n\n        \nprint\n(\n\" \"\n,\n \nend\n=\n''\n)\n\n    \nfor\n \nk\n \nin\n \nrange\n(\n0\n,\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n\n    \nprint\n(\n\"\"\n)\n\n\n\n\n\n\n         *\n        **\n       ***\n      ****\n     *****\n    ******\n   *******\n  ********\n *********\n\n\n\n\n\nShort in-class assignment\n\n\nWrite a program to print the following pattern.\n\n**********\n****--****\n***----***\n**------**\n*--------*\n**------**\n***----***\n****--****\n**********\n\nFirst line --> 10 stars\nSecond line --> 4 stars ,2 dashes, 4 stars\nThird line --> 3 stars, 4 dashes, 3 stars\n.\n.\n.\nEigth line --> 4 stars ,2 dashes, 4 stars\nNinth line --> 10 stars again.\n\n\n\n\n\nfor\n \ni\n \nin\n \nrange\n(\n0\n,\n \n5\n):\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n0\n,\n \n5\n \n-\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n\n    \nfor\n \nk\n \nin\n \nrange\n(\n0\n,\n \n2\n*\ni\n):\n\n        \nprint\n(\n\"-\"\n,\n \nend\n=\n''\n)\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n0\n,\n \n5\n \n-\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n\n    \nprint\n(\n\"\"\n)\n\n\n\nfor\n \ni\n \nin\n \nrange\n(\n3\n,\n \n-\n1\n,\n \n-\n1\n):\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n0\n,\n \n5\n \n-\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n\n    \nfor\n \nk\n \nin\n \nrange\n(\n0\n,\n \n2\n*\ni\n):\n\n        \nprint\n(\n\"-\"\n,\n \nend\n=\n''\n)\n\n    \nfor\n \nj\n \nin\n \nrange\n(\n0\n,\n \n5\n \n-\n \ni\n):\n\n        \nprint\n(\n\"*\"\n,\n \nend\n=\n''\n)\n        \n    \nprint\n(\n\"\"\n)\n\n\n\n\n\n\n**********\n****--****\n***----***\n**------**\n*--------*\n**------**\n***----***\n****--****\n**********",
+            "title": "Lecture 3 - Range, Enumerate, For, If, Star-Dash Prog."
+        },
+        {
+            "location": "/lecture-3/#introduction-to-programming-lecture-3",
+            "text": "",
+            "title": "Introduction to Programming - Lecture 3"
+        },
+        {
+            "location": "/lecture-3/#material-covered",
+            "text": "1. Conditional statement \"if\" and Logical Operators\n2. For loops",
+            "title": "Material covered :"
+        },
+        {
+            "location": "/lecture-3/#if-else-and-logical-operators",
+            "text": "\"If\" is the simplest conditional statement. It simply checks if an evaluation condition is True and if it is then it executes a certain block of code. The checking is usually done by a logical operator such as --> more than( > ), less than( < ), equal to( == ), not equal to ( != or not), etc\n\n if <condition>:\n     execute statement(s)",
+            "title": "If-else and Logical Operators"
+        },
+        {
+            "location": "/lecture-3/#binary-logical-operators",
+            "text": "1. Greater than ( > )\n2. Less than ( < )\n3. Equal to ( == )",
+            "title": "Binary Logical Operators :"
+        },
+        {
+            "location": "/lecture-3/#unary-logical-operators",
+            "text": "1. ! or not\n\nLet us look at some examples :  # Greater than ( > )  if   1   >   0 : \n     print ( \"One is more than zero\" )  else : \n     print ( \"BITS Pilani Goa Campus is better than IIT Kanpur\" )  # Less than ( < )  if   12   <   42 : \n     print ( \"Yes, 12 is less than 42\" )  else : \n     print ( \"Everyone registered in CTE Python will pass with distinction (90%+ marks)\" )  # Equal to ( == )  if   2   +   2   ==   4 : \n     print ( \"Two plus Two equals Four\" )  else : \n     print ( \"Lite......\" )  # Not equal to ( != )  if   1   !=   0 : \n     print ( \"Sachin\" )  else : \n     print ( \"Kohli\" )  # Inversion operator  if   not   2   +   2   ==   4 : \n     print ( \"Lite....\" )  else : \n     print ( \"CTE Python....\" )",
+            "title": "Unary Logical Operators :"
+        },
+        {
+            "location": "/lecture-3/#chained-conditional",
+            "text": "if <condition 1> is True:\n    execute <statement(s) > 1\nelif <condition 2> is True:\n    execute <statement(s) > 2\nelif <condition 3> is True:\n    execute <statement(s) > 3\nelif <condition 4> is True:\n    execute <statement(s) > 4\n.\n.\n.\nelse:\n    execute <statement(s)> n  #### Let us see an example :   if   1   <   0 : \n     print ( 1 ,   end = '' )  elif   2   ==   3 : \n     print ( 2 ,   end = '' )  elif   not   3   ==   4 : \n     print ( 3 ,   end = '' )  print ( \".....Lite\" )",
+            "title": "Chained Conditional"
+        },
+        {
+            "location": "/lecture-3/#the-condition-need-not-directly-involve-a-logical-operator-for-example",
+            "text": "a   =   [ 1 ,   2 ,   3 ]  if   isinstance ( a ,   list ): \n     print ( a ,   \"is a list !\" )  if   2   in   a : \n     print ( \"Yes, 2 is in \" ,   a )  if   5   not   in   a : \n     print ( \"No, 5 is not in \" ,   a )",
+            "title": "The condition need not directly involve a logical operator. For example :"
+        },
+        {
+            "location": "/lecture-3/#iterations",
+            "text": "Iterative constructs are a key feature of any well developed programming language.\nLooping can be done over an iterable which can be a list, set, dictionary, etc.\nLet us concern ourselves with lists for now.",
+            "title": "Iterations"
+        },
+        {
+            "location": "/lecture-3/#common-library-functions-to-use-in-loops",
+            "text": "",
+            "title": "Common library functions to use in loops :"
+        },
+        {
+            "location": "/lecture-3/#range",
+            "text": "Usage : range(start, stop, step)\n\n This library function returns a list which is an arithmetic progression. The default step value is 1.",
+            "title": "range"
+        },
+        {
+            "location": "/lecture-3/#examples",
+            "text": "list ( range ( 0 ,   10 ))   [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  list ( range ( - 4 ,   10 ))   [-4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  list ( range ( 0 ,   10 ,   3 ))   [0, 3, 6, 9]  list ( range ( 0 ,   5 ,   - 6 ))   []  list ( range ( - 10 ,   10 ,   - 5 ))   []  list ( range ( 10 ,   2 ,   3 ))   []  list ( range ( 10 ,   1 ,   - 2 ))   [10, 8, 6, 4, 2]",
+            "title": "Examples"
+        },
+        {
+            "location": "/lecture-3/#enumerate",
+            "text": "Usage : enumerate(<list>, starting_index=1)\n\n This library function returns an iterable object contains tuples of structure (index, list value at index).\n Extra optional argument provides a different starting index. Default starting index is 0.\n In that case the tuples are of the structure (index, list value at <index - starting_index>)",
+            "title": "enumerate"
+        },
+        {
+            "location": "/lecture-3/#examples_1",
+            "text": "list ( enumerate ( range ( 0 , 5 )))   [(0, 0), (1, 1), (2, 2), (3, 3), (4, 4)]  list ( enumerate ( range ( 0 , 5 ),   10 ))   [(10, 0), (11, 1), (12, 2), (13, 3), (14, 4)]",
+            "title": "Examples"
+        },
+        {
+            "location": "/lecture-3/#for-loop",
+            "text": "",
+            "title": "For Loop"
+        },
+        {
+            "location": "/lecture-3/#structure",
+            "text": "for value in iterable:\n    execute statement(s)\n\nOnly by looking at many examples will this become clear  a   =   [ 1 ,   2 ,   3 ,   4 ,   5 ]  for   value   in   a : \n     print ( value ,   end = ' ' )   1 2 3 4 5  b   =   [[ 1 ,   2 ,   3 ], \n      [ 4 ,   5 ,   6 ], \n      [ 7 ,   8 ,   9 ]]  for   sublist   in   b : \n     for   value   in   sublist : \n         print ( value ,   end = ' ' )   1 2 3 4 5 6 7 8 9",
+            "title": "Structure"
+        },
+        {
+            "location": "/lecture-3/#tuples",
+            "text": "Tuples are the immutable equivalent of lists.\n\nDeclared by : (value_1, value_2, .....)  a   =   ( 2 ,   3 ,   4 )  print ( a )   (2, 3, 4)",
+            "title": "Tuples"
+        },
+        {
+            "location": "/lecture-3/#you-cannot-change-any-element-of-a-tuple-to-a-new-value-since-tuples-are-immutable-types-for-example",
+            "text": "a [ 1 ]   =   10  print ( a )   ---------------------------------------------------------------------------\n\nTypeError                                 Traceback (most recent call last)\n\n<ipython-input-5-efd97496539c> in <module>()\n----> 1 a[1] = 10\n      2 print(a)\n\n\nTypeError: 'tuple' object does not support item assignment  a   =   [ \"One\" ,   \"Two\" ,   \"Three\" ]  for   i ,   value   in   enumerate ( a ): \n     print ( \"Value at index <\" ,   i ,   \"> of list<a> is : \" ,   value )   Value at index < 0 > of list<a> is :  One\nValue at index < 1 > of list<a> is :  Two\nValue at index < 2 > of list<a> is :  Three  for   i   in   range ( 0 ,   10 ): \n     for   j   in   range ( 0 ,   i ): \n         print ( \"*\" ,   end = '' ) \n     print ( \"\" )   *\n**\n***\n****\n*****\n******\n*******\n********\n*********  for   i   in   range ( 0 ,   10 ): \n     for   j   in   range ( 10 ,   i ,   - 1 ): \n         print ( \" \" ,   end = '' ) \n     for   k   in   range ( 0 ,   i ): \n         print ( \"*\" ,   end = '' ) \n     print ( \"\" )            *\n        **\n       ***\n      ****\n     *****\n    ******\n   *******\n  ********\n *********",
+            "title": "You cannot change any element of a tuple to a new value since tuples are immutable types. For example :"
+        },
+        {
+            "location": "/lecture-3/#short-in-class-assignment",
+            "text": "Write a program to print the following pattern.\n\n**********\n****--****\n***----***\n**------**\n*--------*\n**------**\n***----***\n****--****\n**********\n\nFirst line --> 10 stars\nSecond line --> 4 stars ,2 dashes, 4 stars\nThird line --> 3 stars, 4 dashes, 3 stars\n.\n.\n.\nEigth line --> 4 stars ,2 dashes, 4 stars\nNinth line --> 10 stars again.  for   i   in   range ( 0 ,   5 ): \n     for   j   in   range ( 0 ,   5   -   i ): \n         print ( \"*\" ,   end = '' ) \n     for   k   in   range ( 0 ,   2 * i ): \n         print ( \"-\" ,   end = '' ) \n     for   j   in   range ( 0 ,   5   -   i ): \n         print ( \"*\" ,   end = '' ) \n     print ( \"\" )  for   i   in   range ( 3 ,   - 1 ,   - 1 ): \n     for   j   in   range ( 0 ,   5   -   i ): \n         print ( \"*\" ,   end = '' ) \n     for   k   in   range ( 0 ,   2 * i ): \n         print ( \"-\" ,   end = '' ) \n     for   j   in   range ( 0 ,   5   -   i ): \n         print ( \"*\" ,   end = '' )         \n     print ( \"\" )   **********\n****--****\n***----***\n**------**\n*--------*\n**------**\n***----***\n****--****\n**********",
+            "title": "Short in-class assignment"
         }
     ]
 }
