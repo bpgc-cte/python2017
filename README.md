@@ -20,5 +20,11 @@ Modular Programming
 
 ### Week Four
 
-Introduction to Object Oriented Programming  
+Classes and Objects  
+Inheritance, Overloading and Overidding  
+
+### Week Five
+ 
+Polymorphism  
+Decorators, Multiple Inheritance  
 
