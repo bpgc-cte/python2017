@@ -28,3 +28,10 @@ Inheritance, Overloading and Overidding
 Polymorphism  
 Decorators, Multiple Inheritance  
 
+### Week Six
+
+Git/Github and Basic Unix  
+
+### Week Seven
+
+Unit Testing and Network Programming
